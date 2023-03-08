@@ -20,10 +20,11 @@ type User struct {
 
 func main() {
 	//connect to database
-	db, err := sql.Open("mysql",  "user:root@/dbname")
+	db, err := sql.Open("mysql",  "root:password@/dbname")
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	defer db.Close()
 
 	//create the table if it doesn't exist
