@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+
 	// "os"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -20,7 +21,7 @@ type User struct {
 
 func main() {
 	//connect to database
-	db, err := sql.Open("mysql",  "root:password@/dbname")
+	db, err := sql.Open("mysql", "root:password@/dbname")
 	if err != nil {
 		log.Fatal(err)
 	}
