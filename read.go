@@ -8,12 +8,13 @@ import (
 
 func main() {
     // Open the CSV file
-    file, err := os.Open("data.csv")
-    if err != nil {
-        fmt.Println("Error:", err)
-        return
-    }
-    defer file.Close()
+    file, err := os.Open("datas.csv")
+   if err != nil {
+		fmt.Println("Error opening file:", err)
+		return
+	}
+	defer file.Close()
+
 
     // Create a new CSV reader
     reader := csv.NewReader(file)
