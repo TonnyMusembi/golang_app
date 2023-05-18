@@ -8,7 +8,7 @@ import (
 
 func main() {
     // Open the CSV file
-    file, err := os.Open("datas.csv")
+    file, err := os.Open("data.csv")
    if err != nil {
 		fmt.Println("Error opening file:", err)
 		return
